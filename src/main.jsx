@@ -28,8 +28,9 @@ const router = createBrowserRouter([
         element: <MealsContiner></MealsContiner>,
       },
       {
-        path: "/Details",
-        // loader:()=> fetch('https://www.themealdb.com/api/json/v1/1/search.php?s'),
+        path: "/Details/:idmeal",
+        loader:({params})=>fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.idmeal}`),
+        // loader:({params})=>console.log( params),
         element: <ShowDetails></ShowDetails>,
       },
       {
