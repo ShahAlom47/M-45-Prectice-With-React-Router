@@ -5,6 +5,7 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
+
 } from "react-router-dom";
 import Home from './Components/Home.jsx';
 import Banner from './Components/Banner.jsx';
@@ -12,11 +13,16 @@ import About from './Components/About.jsx';
 import LogIn from './Components/LogIn.jsx';
 import MealsContiner from './Components/MealsContiner.jsx';
 import ShowDetails from './Components/ShowDetails.jsx';
+import ErrorPage from './Components/ErrorPage.jsx';
+
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement : <ErrorPage> </ErrorPage>,
     children: [
       {
         path: "/",
