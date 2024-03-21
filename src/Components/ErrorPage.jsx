@@ -3,8 +3,7 @@ import {useRouteError} from 'react-router-dom';
 const ErrorPage = () => {
     
 const error = useRouteError()
-console.log(error.statusText);
-console.log(error.statusText);
+
     return (
         <div className=' text-white'>
 
